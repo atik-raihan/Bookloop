@@ -7,11 +7,54 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="bookloop/book.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header id="site-header"></header>
+
+<main id="main">
+
+  <div class="wrap hero">
+    <div>
+      <h1>Sell semester books directly to juniors.</h1>
+      <p class="hero-lead">Fair prices, campus meetups, instant cash. No shipping, no extra fees.</p>
+      <div class="hero-actions">
+        <a class="btn btn-ink" href="sell.html">Sell a book</a>
+        <a class="btn" href="browse.html">Find a book</a>
+        <span class="hand" id="college-line"></span>
+      </div>
+    </div>
+
+    <div class="calc-wrap">
+      <div class="sticker">You set the price</div>
+      <section class="calc paper" aria-labelledby="calc-title">
+        <h2 id="calc-title">What is your book worth?</h2>
+        <div class="field">
+          <label for="calc-original">It cost me (<span class="cur"></span>)</label>
+          <input id="calc-original" type="number" inputmode="numeric" min="0" step="10" value="800">
+        </div>
+
+        <div class="calc-row shop"><span id="calc-shop-label">The shop pays</span><strong id="calc-shop"></strong></div>
+        <div class="bar shop"><i id="calc-shop-bar"></i></div>
+
+        <div class="field">
+          <label for="calc-percent">I sell it for <output id="calc-pct" for="calc-percent">50%</output> of the new price</label>
+          <input id="calc-percent" type="range" min="20" max="90" step="5" value="50">
+        </div>
+        <div class="calc-row you"><span>On BookLoop</span><strong id="calc-you"></strong></div>
+        <div class="bar you"><i id="calc-you-bar"></i></div>
+
+        <p class="calc-diff" id="calc-diff" aria-live="polite"></p>
+      </section>
+      <div class="calc-note">
+        <span class="hand">Adjust the slider to compare prices</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
 
 </body>
 </html>
