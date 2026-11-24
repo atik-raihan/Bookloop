@@ -48,3 +48,54 @@ a { color: inherit; }
 h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: 0; text-wrap: balance; }
 p { margin: 0; }
 [hidden] { display: none !important; }
+
+
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip {
+  position: absolute; left: 12px; top: -80px; z-index: 50;
+  background: var(--ink); color: var(--paper); padding: 8px 16px; border-radius: 8px; font-weight: 500;
+}
+.skip:focus { top: 12px; }
+
+:focus-visible { outline: 2px solid #8A1C3C; outline-offset: 2px; }
+
+.hand { font-family: var(--font); font-weight: 500; font-size: 1rem; line-height: 1.4; color: var(--muted); }
+.icon { display: inline-flex; flex: none; }
+
+
+
+.site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+.header-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 12px; }
+
+.logo { display: inline-flex; align-items: center; gap: 8px; font-size: 1.125rem; font-weight: 600; letter-spacing: 0; text-decoration: none; }
+.logo-mark { display: inline-flex; }
+.logo-mark svg { width: 32px; height: 32px; }
+
+.nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; font-weight: 500; }
+.nav a:not(.btn) { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.nav a:not(.btn):hover, .nav a[aria-current="page"] {
+  color: #8A1C3C;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.badge {
+  display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; margin-left: 8px;
+  border-radius: 10px; background: var(--pink-pale); color: var(--danger); font-size: .75rem; font-weight: 500; line-height: 1;
+}
+
+.site-header .nav-toggle { display: none; }
