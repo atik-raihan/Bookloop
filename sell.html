@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell a book | BookLoop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bookloop css/book.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+
+<main id="main" class="wrap">
+  <div class="page-head">
+    <h1 id="page-title">Sell a book</h1>
+    <p id="page-sub">Tell juniors what you are selling and what you want for it. You can edit or remove the listing any time.</p>
+  </div>
+
+  <form id="sell-form" class="form-card paper" novalidate>
+    <div id="form-errors" class="alert alert-error" role="alert" tabindex="-1" hidden></div>
+
+    <fieldset>
+      <legend class="legend">The book</legend>
+      <div class="form-grid">
+        <div class="field wide">
+          <label for="title">Title</label>
+          <input id="title" type="text" maxlength="120" autocomplete="off" placeholder="Advanced Engineering Mathematics">
+        </div>
+        <div class="field wide">
+          <label for="author">Author <span class="hint">(optional)</span></label>
+          <input id="author" type="text" maxlength="80" autocomplete="off" placeholder="Erwin Kreyszig">
+        </div>
+        <div class="field">
+          <label for="dept">Department</label>
+          <select id="dept"></select>
+        </div>
+        <div class="field">
+          <label for="semester">Which semester is it for?</label>
+          <select id="semester"></select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="legend">Condition</legend>
+      <div class="choices" id="conditions"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="legend">Price</legend>
+      <div class="form-grid">
+        <div class="field">
+          <label for="original">Price when new (<span class="cur"></span>)</label>
+          <input id="original" type="number" inputmode="numeric" min="1" step="10" placeholder="800">
+        </div>
+        <div class="field">
+          <label for="price">Your price (<span class="cur"></span>)</label>
+          <input id="price" type="number" inputmode="numeric" min="1" step="10" placeholder="400">
+        </div>
+      </div>
+      <div class="meter-box">
+        <div class="meter" aria-hidden="true"><i id="meter-fill"></i><b id="meter-shop"></b></div>
+        <p class="meter-text" id="meter-text" aria-live="polite">Fill in both prices and we will show how you compare with the shop.</p>
+      </div>
+      <div class="quick">
+        <span class="hand">quick price:</span>
+        <button class="chip-btn" type="button" data-pct="40">40% of new</button>
+        <button class="chip-btn" type="button" data-pct="50">50% of new</button>
+        <button class="chip-btn" type="button" data-pct="60">60% of new</button>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="legend">Details</legend>
+      <div class="form-grid">
+        <div class="field wide">
+          <label for="description">Anything the buyer should know? <span class="hint">(optional)</span></label>
+          <textarea id="description" maxlength="600" placeholder="Chapters 1 to 6 have light pencil notes. Spine is still tight."></textarea>
+        </div>
+        <div class="field">
+          <label for="spot">Where can you meet?</label>
+          <select id="spot"></select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="legend">Photos</legend>
+      <div class="photo-picker">
+        <input id="photos" class="sr-only" type="file" accept="image/*" multiple>
+        <label class="btn btn-small" for="photos" id="photo-btn">Choose photos</label>
+        <p class="hint">Up to 3. Show the cover, the spine and one inside page. Buyers trust a book they can see.</p>
+      </div>
+      <div class="thumbs-edit" id="photo-previews"></div>
+    </fieldset>
+
+    <div class="form-actions">
+      <button class="btn btn-ink" type="submit" id="submit-btn">Publish listing</button>
+      <a class="btn" href="browse.html">Cancel</a>
+    </div>
+  </form>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/sell.js"></script>
+</body>
+</html>
