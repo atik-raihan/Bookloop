@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find a book | BookLoop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+
+<main id="main" class="wrap">
+  <div class="page-head">
+    <h1>Find a book</h1>
+    <p>Search by title, author or department. Prices are set by the seller, so they are always open for a chat.</p>
+  </div>
+
+  <div class="browse">
+    <form id="filters" class="filters paper" role="search" aria-label="Filter books">
+      <details open id="filters-details">
+        <summary>Filters</summary>
+        <div class="filters-body">
+          <div class="field">
+            <label for="f-q">Search</label>
+            <input id="f-q" type="search" placeholder="Title, author, department" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="f-dept">Department</label>
+            <select id="f-dept"></select>
+          </div>
+          <div class="field">
+            <label for="f-sem">Semester</label>
+            <select id="f-sem"></select>
+          </div>
+          <fieldset>
+            <legend class="legend filters-legend">Condition</legend>
+            <div class="check-list" id="f-cond"></div>
+          </fieldset>
+          <div class="field">
+            <label for="f-max">Highest price you'll pay</label>
+            <input id="f-max" type="number" inputmode="numeric" min="0" step="50" placeholder="No limit">
+          </div>
+          <button class="btn btn-small" type="button" id="f-reset">Clear filters</button>
+        </div>
+      </details>
+    </form>
+
+    <section aria-label="Results">
+      <div class="results-bar">
+        <p class="count" id="count" aria-live="polite"></p>
+        <div class="sort">
+          <label for="f-sort">Sort by</label>
+          <select id="f-sort" form="filters">
+            <option value="new">Newest first</option>
+            <option value="low">Price, low to high</option>
+            <option value="high">Price, high to low</option>
+            <option value="saving">Biggest saving</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="books-grid" id="grid"></div>
+
+      <div class="empty paper" id="empty" hidden>
+        <p class="hand">Nothing matches that.</p>
+        <p>Try fewer filters, or list the book you wish you could find. Somebody may have it.</p>
+        <a class="btn btn-ink" href="sell.html">Sell a book</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

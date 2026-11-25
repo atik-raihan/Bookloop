@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in or sign up | BookLoop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bookloop css/book.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+
+<main id="main" class="wrap">
+  <div class="auth-card paper">
+    <div class="tabs" role="tablist" aria-label="Account">
+      <button class="tab" role="tab" id="tab-login" aria-controls="panel-login" aria-selected="true" type="button">Log in</button>
+      <button class="tab" role="tab" id="tab-signup" aria-controls="panel-signup" aria-selected="false" type="button" tabindex="-1">Sign up</button>
+    </div>
+
+    <div id="auth-error" class="alert alert-error" role="alert" hidden></div>
+
+    <section id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+      <h1>Log in to BookLoop</h1>
+      <p>Log in to message sellers and manage your listings.</p>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" autocomplete="current-password">
+        </div>
+        <button class="btn btn-ink" type="submit">Log in</button>
+      </form>
+      <div class="demo-box">
+        <p><strong>Just looking around?</strong> Use a sample account. Nusrat has books for sale and an unread message.</p>
+        <button class="btn btn-small" type="button" id="fill-demo">Fill in Nusrat's login</button>
+      </div>
+    </section>
+
+    <section id="panel-signup" role="tabpanel" aria-labelledby="tab-signup" hidden>
+      <h1>Join BookLoop</h1>
+      <p>It is free. You only need an email, a password and your department.</p>
+      <form id="signup-form" novalidate>
+        <div class="field">
+          <label for="su-name">Your name</label>
+          <input id="su-name" type="text" autocomplete="name" maxlength="60">
+        </div>
+        <div class="field">
+          <label for="su-email">Email</label>
+          <input id="su-email" type="email" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="su-password">Password</label>
+          <input id="su-password" type="password" autocomplete="new-password">
+          <span class="hint">At least 6 characters.</span>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="su-dept">Department</label>
+            <select id="su-dept"></select>
+          </div>
+          <div class="field">
+            <label for="su-sem">Current semester</label>
+            <select id="su-sem"></select>
+          </div>
+        </div>
+        <button class="btn btn-ink" type="submit">Create my account</button>
+      </form>
+    </section>
+
+    <section id="panel-already" hidden>
+      <h1>You're logged in</h1>
+      <p id="already-text"></p>
+      <div class="buy-actions">
+        <a class="btn btn-ink" href="browse.html">Browse books</a>
+        <a class="btn" href="profile.html">My self</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+
+</body>
+</html>
