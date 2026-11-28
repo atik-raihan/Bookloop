@@ -49,6 +49,44 @@ h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: 0; text-wrap: balance
 p { margin: 0; }
 [hidden] { display: none !important; }
 
+/* google login */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.btn-google {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #fff;
+    color: #222;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-google:hover {
+    background: #f5f5f5;
+}
 
 
 .wrap {
