@@ -1,4 +1,16 @@
 /* BookLoop front-end application: demo/localStorage edition */
+
+/*
+ * BookLoop Project
+ * Original Author: Your Friend's Name
+ * GitHub: https://github.com/aladil-cmd
+ * Original Source:
+ * https://github.com/aladil-cmd/BookLoop
+ *
+ * Code reused with attribution.
+ */
+
+
 (() => {
   "use strict";
   const $ = (s, r=document) => r.querySelector(s);
