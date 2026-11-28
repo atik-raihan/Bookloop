@@ -19,7 +19,7 @@
     get(k, fallback=[]) { try { return JSON.parse(localStorage.getItem("bookloop_"+k)) ?? fallback; } catch { return fallback; } },
     set(k,v) { localStorage.setItem("bookloop_"+k, JSON.stringify(v)); }
   };
-  const departments = ["CST","Computer Science","EEE","Civil","Mechanical","Textile","BBA","English","Architecture","Other"];
+  const departments = ["Computer Science","Electrical & Electronics","Civil","Tourinsm & Hospitality","Textile","Grapics design","Talecommunicaton","Architecture","Other"];
   const semesters = Array.from({length:8},(_,i)=>`Semester ${i+1}`);
   const conditions = ["Like new","Very good","Good","Acceptable"];
   const spots = ["Campus library","Main gate","Cafeteria","Department building","Other public place"];
